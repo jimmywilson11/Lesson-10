@@ -36,30 +36,73 @@ body
         text-transform: uppercase
         h2
             margin-bottom: 0px
+.carousel
+    margin-bottom: 25px
+    ul
+        position: relative
+        margin: 0
+    .panel-fullscreen 
+        position: absolute
+        display: inline-block
+        z-index: 111 
+        color: $white
+        width: 5%
+        height: 5%    
+        top: 3%
+        right: 0
+        left: 97%
+        bottom: 0
+        overflow: auto
+        .fa-expand
+            color: $white
+    .carousel-control-prev, .carousel-control-next
+        width: 2%
+        height: 15%
+        top: 50%
+        background-color: $black
+.carousel-item
+    padding: 8px
+    background-color: $light-gray  
+.indicators
+    background-color: $black
+    padding: 10px
+    justify-content: space-around
+    flex-wrap: wrap
 .block-head
     display: inline-block
+    margin-bottom: 15px
     padding: 3px 20px
     font-size: 18px
     text-transform: uppercase
     color: $yellow
     background-color: $light-gray
 article
-    margin: 15px 0    
+    position: relative
+    margin: 0px 0 60px 0
+    &::after
+        content: ''
+        display: block
+        position: absolute
+        margin-top: 30px
+        width: 100%
+        height: 2px
+        color: $line
+        background-color: $line    
     p
         margin: 0
         font-size: 15px   
-    .modal-body
-        padding: 0
-        h3
-            margin: 0
-            color: $yellow        
-            background-color: $light-gray
-            text-align: center
-        .author
-            margin-top: 7px
-            font-size: 18px
-            margin-right: 15px
-            color: $dark-blue
+.modal-body
+    padding: 0
+    h3
+        margin: 0
+        color: $yellow        
+        background-color: $light-gray
+        text-align: center
+    .author
+        margin-top: 7px
+        font-size: 18px
+        margin-right: 15px
+        color: $dark-blue
 .overlay
     display: none
     position: absolute
@@ -78,7 +121,8 @@ article
 a  
     &:hover> .overlay
         display: block
-
+.recent-projects
+    padding-bottom: 100px
 .list
     background-color: $light-gray
     padding-left: 27px
